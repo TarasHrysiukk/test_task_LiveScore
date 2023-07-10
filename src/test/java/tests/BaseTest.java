@@ -20,12 +20,12 @@ abstract public class BaseTest {
     Tools tools = new Tools();
 
     private final static String BASE_URL = "https://www.livescore.com/";
+
     public void setup() {
         WebDriverManager.chromedriver().setup();
         Configuration.browser = "chrome";
         Configuration.driverManagerEnabled = true;
         Configuration.browserSize = "1920x1080";
-//        Configuration.headless = true;
     }
 
     @BeforeEach

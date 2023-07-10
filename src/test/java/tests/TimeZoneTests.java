@@ -1,18 +1,14 @@
 package tests;
 
-import jdk.jshell.spi.ExecutionControl;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import pages.MainPage;
 
 public class TimeZoneTests extends BaseTest {
 
-//    private final static String BASE_URL = "https://www.livescore.com/";
     private static String initialTime;
 
     @BeforeEach
     void closeCookiesBar() {
-
     }
 
     @Test
@@ -24,7 +20,6 @@ public class TimeZoneTests extends BaseTest {
         //day and hours before changes timezone
         String initTime = matchPage.getValue();
         String initDay = matchPage.getDay();
-
 
         burgerMenu.open();
         burgerMenu.shouldBeOpened();
@@ -39,17 +34,6 @@ public class TimeZoneTests extends BaseTest {
         settings.applyChanges();
 
         matchPage.shouldBeOpened();
-        matchPage.newValueShouldBe(initDay,initTime,"+06:00", defaultShift);
-//        int changedTime = tools.convertTimeToSeconds(matchPage.getValue());
-//        int expectedTime = initTime-shiftHours-(8*3600);
-//        matchPage.valueShouldBe(tools.convertMinutesToTime(expectedTime));
-
-
-
-
-
-
-
-
+        matchPage.newValueShouldBe(initDay, initTime, "+06:00", defaultShift);
     }
 }

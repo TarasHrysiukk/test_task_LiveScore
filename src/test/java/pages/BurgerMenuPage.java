@@ -1,12 +1,8 @@
 package pages;
 
-import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.*;
 
-import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
-
-import java.time.Duration;
 
 public class BurgerMenuPage {
     private final SelenideElement burgerMenuIcon = $x("//span[@id='burger-menu-open']");
@@ -16,6 +12,7 @@ public class BurgerMenuPage {
     public void open() {
         burgerMenuIcon.click();
     }
+
     public void shouldBeOpened() {
         burgerMenuBody.getAttribute("class").matches(".*isActive");
     }

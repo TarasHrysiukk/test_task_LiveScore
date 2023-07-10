@@ -2,6 +2,7 @@ package pages;
 /*
 Main page - https://www.livescore.com/en/
 */
+
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.*;
 
@@ -9,7 +10,6 @@ import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 
 import java.time.Duration;
-
 
 public class MainPage {
     private final SelenideElement matchCalendar = $x("//div[(@id='match-calendar__today')]");

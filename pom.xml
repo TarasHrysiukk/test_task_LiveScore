@@ -68,30 +68,10 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.0.0-M5</version>
                 <configuration>
-                    <!--                    <parallel>classes</parallel>-->
-                    <!--                    <threadCount>${parallel.tests}</threadCount>-->
-                    <rerunFailingTestsCount>3</rerunFailingTestsCount>
-                    <systemPropertyVariables>
-                        <reporter.debug>false</reporter.debug>
-                    </systemPropertyVariables>
+                    <reportsDirectory>${project.build.directory}/surefire-reports</reportsDirectory>
                     <testFailureIgnore>true</testFailureIgnore>
                 </configuration>
             </plugin>
-
-<!--            <plugin>-->
-<!--                <groupId>io.qameta.allure</groupId>-->
-<!--                <artifactId>allure-maven</artifactId>-->
-<!--                <version>3.9</version>-->
-<!--                <configuration>-->
-<!--                    &lt;!&ndash;                    <parallel>classes</parallel>&ndash;&gt;-->
-<!--                    &lt;!&ndash;                    <threadCount>${parallel.tests}</threadCount>&ndash;&gt;-->
-<!--                    <rerunFailingTestsCount>3</rerunFailingTestsCount>-->
-<!--                    <systemPropertyVariables>-->
-<!--                        <reporter.debug>false</reporter.debug>-->
-<!--                    </systemPropertyVariables>-->
-<!--                    <testFailureIgnore>true</testFailureIgnore>-->
-<!--                </configuration>-->
-<!--            </plugin>-->
         </plugins>
     </build>
 

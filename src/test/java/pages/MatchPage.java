@@ -6,10 +6,6 @@ import static com.codeborne.selenide.Selenide.$x;
 import com.codeborne.selenide.SelenideElement;
 
 import java.time.Duration;
-import java.time.LocalDate;
-import java.time.LocalTime;
-import java.time.format.DateTimeFormatter;
-import java.util.Locale;
 
 public class MatchPage {
 

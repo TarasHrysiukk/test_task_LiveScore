@@ -27,7 +27,7 @@ public class SettingsPage {
     }
 
     public void selectTimezone(String timeZone) {
-        $x("//div[(text()= 'UTC "+ timeZone + "')]").click();
+        $x("//div[(text()= 'UTC " + timeZone + "')]").click();
     }
 
     public void applyChanges() {
@@ -40,7 +40,6 @@ public class SettingsPage {
 
     public String getDefaultTimeShift() {
         return timeZoneSelector.$x("./label").getOwnText().replace("UTC ", "");
-
     }
 
 }
